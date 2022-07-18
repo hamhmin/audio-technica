@@ -279,7 +279,7 @@ video{
 }
 .col.scroll2 a{
   position: fixed;
-  display: block;
+  display: none;
   bottom: 40px;
   right:40px;
 
