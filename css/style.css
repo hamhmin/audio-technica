@@ -271,8 +271,8 @@ video{
 
 
 .top-btn{
-    width: 35px;
-    height: 35px;
+    width: 22px;
+    height: 26px;
 }
 .col.scroll2{
   position: relative;
@@ -280,8 +280,8 @@ video{
 .col.scroll2 a{
   position: fixed;
   display: none;
-  bottom: 40px;
-  right:40px;
+  bottom: 20px;
+  right:15px;
 
 }
 
