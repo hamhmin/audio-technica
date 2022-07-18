@@ -12,11 +12,35 @@
 /*스크롤이동시 부드럽게 이동*/
 html{
     scroll-behavior: smooth;
+    background: #333;
 }
 /* layout----------------- */
-.wrap {
-  /* margin: 0 auto; */
-
+body{
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+}
+header{
+  max-width: 500px;
+  margin: 0 auto;
+}
+.movie{
+  max-width: 500px;
+  margin: 0 auto;
+}
+#gnb{
+  max-width: 500px;
+  margin: 0 auto;
+}
+video{
+  max-width: 500px;
+  margin: 0 auto;
+}
+#wrap{
+  position: relative;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
 }
 header {
   position: fixed;
@@ -114,7 +138,6 @@ header #logo .symbol-logo {
 #banner {
   width: 100vw;
   height: 450px;
-  background: #fff;
   margin-bottom: 300px;
     
 }
@@ -130,7 +153,8 @@ video{
     height: 100vh;
     background: #000;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     position: absolute;
     z-index: 4;
 }
