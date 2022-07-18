@@ -212,6 +212,7 @@ video{
   flex-wrap: wrap;
   align-items: center;
     justify-content: center;
+    position: relative;
 }
 #home main h2 {
   text-align: center;
@@ -270,12 +271,18 @@ video{
 
 
 .top-btn{
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
 }
 .col.scroll2{
-    display: flex;
-    justify-content: center;
+  position: relative;
+}
+.col.scroll2 a{
+  position: fixed;
+  display: block;
+  bottom: 40px;
+  right:40px;
+
 }
 
 
