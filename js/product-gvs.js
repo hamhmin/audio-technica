@@ -205,10 +205,6 @@ function showProducts_gvs(obj) {
 
   // 번호 부여해서 active(addClass) 추가
 
-
-
-
-
   let tabNo = 0;
   if (params == 'all') {
     tabNo = 0;
@@ -263,47 +259,46 @@ function showProducts_gvs(obj) {
     /*console.log(product);*/
 
 
-    // 상품 보기
-
+    // 전체x "분류별 상품 보기"
     if (params == product.category) {
       //                     data-id=~ = 사용자 정의 id
       let html = `
-        <div class="product" data-id=${i}>
-          <a href="./products-detail.html?id=${i}">
+        <div class="productG" data-id=${i}>
+          <a href="./detail/detail.html?id=${i}">
 
             <img src="${imgUrl}" alt="${name}">
 
-            <div class="info">
-              <p class="prd-title">${name}</p>
-              <p class="price">&#8361 ${price}</p>
-              <p class="explain">${text}</p>
+            <div class="info0">
+              <p class="prd-title0">${name}</p>
+              <p class="price0">&#8361 ${price}</p>
+              <p class="explain0">${text}</p>
             </div>
 
           </a>
         </div>
     `
-      $('#products-gvs .row').append(html);
+      $('#products-gvs .row0').append(html);
     }
 
-    // 상품 전체보기
+    // 분류없이 상품 "전체보기"
     if (params == null) {
 
       let html = `
-        <div class="product" data-id=${i}>
-          <a href="./products-detail.html?id=${i}">
+        <div class="productG" data-id=${i}>
+          <a href="./detail/detail.html?id=${i}">
 
             <img src="${imgUrl}" alt="${name}">
 
-            <div class="info">
-              <p class="prd-title">${name}</p>
-              <p class="price">&#8361 ${price}</p>
-              <p class="explain">${text}</p>
+            <div class="info0">
+              <p class="prd-title0">${name}</p>
+              <p class="price0">&#8361 ${price}</p>
+              <p class="explain0">${text}</p>
             </div>
 
           </a>
         </div>
     `
-      $('#products-gvs .row').append(html);
+      $('#products-gvs .row0').append(html);
       /*console.log(`i = `, i);*/
     };
 
@@ -314,5 +309,4 @@ function showProducts_gvs(obj) {
 $(function () {
   getData();
 });
-
 
