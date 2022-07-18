@@ -62,3 +62,16 @@ $(function(){
           $(this).find('ul').stop().slideToggle();
       });
 });
+
+
+$(window).scroll(function(){
+	if ($(this).scrollTop() > 300){
+		$('.col.scroll2 a').fadeIn(1000);
+	} else{
+		$('.col.scroll2 a').fadeOut(1000);
+	}
+});
+$('.col.scroll2 a').click(function(){
+	$('html, body').animate({scrollTop:0},400);
+	return false;
+});
