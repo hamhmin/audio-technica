@@ -76,28 +76,28 @@ $(window).scroll(function(){
 $(function(){
   $(window).scroll(function(){
     if ($(this).scrollTop() > 200){
-      $('section.col').eq(0).fadeIn(400);
+      $('section.col').eq(0).fadeIn(600);
     } else{
       $('section.col').eq(0).fadeOut(100);
     }
   });
   $(window).scroll(function(){
     if ($(this).scrollTop() > 800){
-      $('section.col').eq(1).fadeIn(400);
+      $('section.col').eq(1).fadeIn(600);
     } else{
       $('section.col').eq(1).fadeOut(100);
     }
   });
   $(window).scroll(function(){
     if ($(this).scrollTop() > 1400){
-      $('section.col').eq(2).fadeIn(400);
+      $('section.col').eq(2).fadeIn(600);
     } else{
       $('section.col').eq(2).fadeOut(100);
     }
   });
   $(window).scroll(function(){
     if ($(this).scrollTop() > 2200){
-      $('section.col').eq(3).fadeIn(400);
+      $('section.col').eq(3).fadeIn(600);
     } else{
       $('section.col').eq(3).fadeOut(100);
     }
