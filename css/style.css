@@ -47,7 +47,11 @@ video{
   height: inherit;
   overflow: hidden;
 }
-
+.buy{
+  max-width: 500px;
+  min-width: 320px;
+  margin: 0 auto;
+}
 
 /* layout----------------- */
 
@@ -143,16 +147,17 @@ header #logo .symbol-logo {
 
 
 #banner {
-  width: 100vw;
-  height: 450px;
+  width: 100%;
+  height: 100vh;
   margin-bottom: 300px;
+  position: relative;
     
 }
 video{
     width: 100%;
-    height: 300px;
-    margin-top: 25vh;
-    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
     z-index: 5;
 }
 .movie{
@@ -160,8 +165,6 @@ video{
     height: 100vh;
     background: #000;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     position: absolute;
     z-index: 4;
 }

@@ -13,8 +13,7 @@
 .btn-all {
   border: none;
   background-color: transparent;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
   margin-bottom: 7%;
 }
 
@@ -88,30 +87,30 @@
   background-color: #333;
   color: #fff;
 }
+
+
 /* 필터 메뉴 */
 .filter {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-
-  width: 40px;
-  height: 20px;
-
-  background-color: var(--main-color1);
+  width: 55px;
+  height: 24px;
+  background-color: #333;
   border-radius: 2px;
-
-  margin-left: 84%;
-  margin-bottom: 20px;
+  position: relative;
+  left: 85%;
+  margin-bottom: 30px;
 }
-
-.filter .btn-small {
-  width: 16px;
-  margin-left: 1px;
-  margin-right: 1px;
+.filter > a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.filter .fi2 {
-  width: 16px;
+.filter img {
+  width: 24px;
+  padding-bottom: 1px;
 }
 
 

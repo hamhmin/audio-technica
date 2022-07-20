@@ -198,6 +198,7 @@ function showProducts_gvs(obj) {
   console.log(quary);
   // ? URL quary문을 object(변수)로 변경 -> html 에서도
   let params = new URLSearchParams(quary).get('category');
+  let paramsMG = new URLSearchParams(quary).get('mainGroup');
 
   // const는 상수라 변경이 불가라서 let으로 변경해준다
 
@@ -235,12 +236,12 @@ function showProducts_gvs(obj) {
   $('.depth2 .bt1').eq(tabNo).addClass('active');
 
 
-
   // ☆ params == null 이면 시작 페이지 "전체보기" 출력 ☆
   if (params == null || params == 'all') { // || = or
     params = null;
   };
   console.log(params);
+
 
   // ★★★★★★★★★★★★★★ 세부 메뉴 ★★★★★★★★★★★★★★★★★
 
@@ -256,15 +257,18 @@ function showProducts_gvs(obj) {
     let price = product.price;
     let imgUrl = product.imgUrl;
     let text = product.text;
-    /*console.log(product);*/
+    let mainGroup = product.mainGroup;
 
+    
+    
+    
 
     // 전체x "분류별 상품 보기"
     if (params == product.category) {
       //                     data-id=~ = 사용자 정의 id
       let html = `
         <div class="productG" data-id=${i}>
-          <a href="./detail/detail.html?id=${i}">
+          <a href="./products-detail.html?id=${i}">
 
             <img src="${imgUrl}" alt="${name}">
 
@@ -285,7 +289,7 @@ function showProducts_gvs(obj) {
 
       let html = `
         <div class="productG" data-id=${i}>
-          <a href="./detail/detail.html?id=${i}">
+          <a href="./products-detail.html?id=${i}">
 
             <img src="${imgUrl}" alt="${name}">
 
@@ -306,7 +310,8 @@ function showProducts_gvs(obj) {
 
 }
 
+
+
 $(function () {
   getData();
 });
-

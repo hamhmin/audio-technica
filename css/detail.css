@@ -1,167 +1,209 @@
-.swiper {
-    width: 100%;
-  }
-  
-  .swiper-slide {
-    background: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .swiper-slide:nth-child(1) {
-    background: #abc;
-  }
-  .swiper-slide:nth-child(2) {
-    background: #bac;
-  }
-  .swiper-slide:nth-child(3) {
-    background: #cab;
-  } /* 이미지슬라이드-------------------------------- */
-  
-  
-  
-  /* 상세페이지 시작----------------- */
-  .container {
-    width: 100%;
-    padding: 20px;
-  }
-  
-  .container h1 {
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  .container h1 span{
-    color: #999;
-  }
-  
-  .container h2 {
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 0;
-  }
-  
-  .container p {
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 400;
-  }
-  
-  #detail main figure img {
-    width: 100%;
-  }
-  
-  .price{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    font-size: 20px;
-  }
-  
-  
-  .option{
-    width: 100%;
-    height: 120px;
-    background-color: #eeeeee;
-    margin-bottom: 130px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .option p{
-    font-size: 16px;
-    float: left;
-    padding-top: 20px;
-    padding-left: 20px;
-  }
-  .option .qtitle {
-    padding-top: 0;
-  }
-  form{
-    float: left;
-    appearance: none;
-    padding-top: 23px;
-    margin-left: 30px;
-  }
-  
-  input[type=radio] {
-    accent-color: black;
-    width: 20px;
-    height: 20px;
-  }
-  
-  
-  .quantity {
-    background: #fff;
-    border: 1px solid black;
-    border-radius: 5px;
-    /* padding: 5px 10px; */
-    text-align: center;
-    width: 64px;
-    height: 22px;
-  
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    gap: 5px;
-    overflow: hidden;
-    margin-left: 83px;
-    margin-top: 78px;
-  }
-  .quantity span {
-    width: 21px;
-  }
-  .quantity button {
-    width: 25px;
-    
-    background: #fff;
-  }
-  .quantity #dec {
-    border-style: none;
-    border-right: 1px solid black;
-  }
-  .quantity #inc {
-    border-style: none;
-    border-left: 1px solid black;
-  }
-  
-  .buy{
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #fff;
-    box-shadow: -5px -5px 15px 5px  rgba(0, 0, 0, 0.3);
-    z-index: 10;
-  }
-  
-  #detail main .buy-btn-group {    
-    display: flex;
-    text-align: center;
-    justify-content: space-around;
-    gap: 14px;
-    margin: 0 30px 0 30px;
-    margin-bottom: 20px;
-  }
-  
-  #detail main .buy-btn-group .btn-large{
-    width: 45%;
-    height: 48px;
-    line-height: 45px;
-    border-radius: 29.5px;
-  }
-  
-  #detail main .buy-btn-group .btn-outline{
-    margin-right: 14px;
-    outline: 0.5px solid #666666;
-    font-size: 16px;
-  }
-  
-  #detail main .buy-btn-group .btn-buy {
-    background-color: #333333;
-    font-size: 16px;
-    color: #fff;
-  }
-  /* 상세페이지 끝----------------- */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 1920px;
+  max-height: 1920px;
+}
+
+figure>img {
+  width: 100%;
+}
+
+
+/* (임시)이미지슬라이드-------------------------------- */
+
+
+
+
+
+/*------------ 상세페이지 시작 ------------ */
+.containerD {
+  margin-top: 53px;
+  width: 100%;
+  padding: 20px;
+}
+
+.containerD h1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.containerD h1 span {
+  color: #999;
+}
+
+.containerD h2 {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.containerD p {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+
+
+
+
+/*---------- 이미지 ---------*/
+#detail main figure img {
+  width: 100%;
+}
+
+
+
+
+
+/*---------------- 하단 옵션들 ----------------*/
+.option {
+  width: 100%;
+  background-color: #eeeeee;
+  margin-bottom: 100px;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+/*---------------- 색상 파트 ----------------*/
+.wrap {
+  padding-top: 30px;
+  width: 100%;
+}
+
+.wrapcol1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.wrapcol1 .wcolor {
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.wform {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type=radio] {
+  accent-color: #333;
+  width: 20px;
+  height: 20px;
+}
+
+
+/*---------------- 수량 파트 ----------------*/
+.wrapcol2 {
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 60px;
+}
+
+
+.quantity {
+  margin-left: 56px;
+  max-width: 80px;
+  margin-top: -24px;
+  background: #fff;
+  border: 0.1px solid rgb(221, 221, 221);
+  border-radius: 20px;
+  text-align: center;
+  color: #333;
+
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+
+  padding: 1px 8px;
+  overflow: hidden;
+
+  z-index: 5;
+}
+
+.quantity span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  width: 120px;
+  height: auto;
+}
+
+.plus {
+  padding-left: 4px;
+}
+
+.minus {
+  padding-right: 4px;
+}
+
+.num {
+  padding-left: 6px;
+  padding-right: 6px;
+  border-left: 1px solid #cccccc50;
+  border-right: 1px solid #cccccc50;
+}
+
+.quantity span#num {
+  border-right: 1px solid rgba(51, 51, 51, 0.2);
+  border-left: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+
+/*-------------- 판매 정보 --------------*/
+.buy {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  box-shadow: -5px -5px 15px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 20px;
+}
+.buy-btn-group {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+
+.buy-btn-group>a {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 40px;
+}
+.btn-large.btn-buy{
+  border: 0;
+}
+.btn-buy {
+  color: #fff;
+  background-color: #333;
+}
+
+/* 상세페이지 끝----------------- */

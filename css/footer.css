@@ -1,126 +1,91 @@
 
 footer {
   background-color: #eee;
+  padding: 0px;
 }
+
+
+/* 푸터메뉴 */
+.footer-gnb {
+  font-size: 11px;
+  padding: 11px 20px;
+  line-height: 20px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.footer-gnb li {
+  display: inline-block;
+}
+
+.footer-gnb a {
+  color: #333;
+  padding: 5px 10px;
+}
+
+.footer-gnb .footer-nav::after {
+  content: "|";
+  color: #333;
+}
+
+.footer-gnb .footer-nav:last-child::after {
+  content: "";
+}
+
+
+/* sns */
 .sns {
-  padding-top: 36px;
-  margin-bottom: 30px;
-  margin-right: -15px;
+  padding: 10px 20px; 
+  display: flex;
+  justify-content: center;
 }
 
 .sns .bi:first-child{
-    margin-right:20px; 
+  margin-right: 7vw;
 }
 .sns .bi {
     font-size: 23px;
     color: #333;
 }
 
-a {
-  text-decoration: none;
+/* info */
+.info{
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  flex-direction: column;
+  padding: 5px 20px;
 }
 
-#bankbook, .bank2 p, #ask {
-  font-size: 12px;
-}
+/* article */
 
-.bank2 {
-  margin-left: 50px;
-  line-height: 23px;
+.info article{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
-.bank2 p {
-  font-weight: bold;
+.info article h2{
+  font-size: 15px;
 }
-
-.bank2 button {
-  font-size: 9px;
-  padding: 3px;
-  position: relative;
-  left: 5px;
+.info article p{
+  font-size: 13px;
+  text-align: left;
 }
-
-#bankbook {
-  padding-left: 20px;
+.info .contents form{
+  margin-top: 10px;
+  font-size: 15px;
+  /* 테두리가 안보여 크게 조절함 */
 }
-
-#ask {
-  padding-left: 20px;
-  
+.info article p span{
+  font-weight: 700;
 }
-
-#deliver {
-  font-size: 11px;
-  padding-left: 70px;
-  padding-right: 70px;
-  position: relative;
-  right: 10px
-}
-
-.sns, #bottom, #bankbook, .bank3 {
+.info .cs{
   display: flex;
   justify-content: center;
 }
-
-.bank2, .down {
-  text-align: center;
-}
-
-.bank3 {
-  padding-top: 30px;
-  padding-bottom: 37px;
-}
-.down {
-  margin-bottom: 32.5px;
-}
-.down h2 {
-  padding-bottom: 18px;
-  font-size: 19px;
-  /*font-weight: bold;*/
-}
-
-.down #adress {
-  margin-left: 34.5px;
-  margin-right: 34.5px;
-  padding-bottom: 5px;
-  font-size: 11px;
-}
-
-.down #day {
-  padding-left: 74px;
-  padding-right: 74px;
-  font-size: 11px;
-}
-
-#bankbook b {
-  padding-left: 50px;
-  margin-right: 20px;
-}
-
-#bottom {
-  font-size: 8px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-top: 1px solid #fff;
-}
-
-#bottom li {
-  list-style: none; 
-}
-
-#bottom a {
-  color: black;
-}
-
-#bottom .item::after {
-  content: "|";
-  margin-right: 4px;
-  background-color: #ccc;
-  color: #ccc;
-}
-
-#bottom .item:last-child::after {
-  content: "";
+.info .cs h3{
+  font-size: 24px;
+  margin-bottom: 20px;
 }

@@ -106,3 +106,12 @@ $(function(){
 
 
 
+//alert
+
+$(function(){
+  $('#my').eq(0).not().click(function(){
+    alert("현재 제공되지 않는 서비스 입니다.");
+    return false;
+  });
+});
+

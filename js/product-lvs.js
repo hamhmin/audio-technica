@@ -1,70 +1,70 @@
 
 // 2 depth 메뉴
-$(function(){ 
+$(function () {
   // all
   // $('.btn-all').click(function(){
   //   $('.depth2 button').addClass('on');
   // });
 
   // headphone
-  $('.btn-headphone').click(function(){
+  $('.btn-headphone').click(function () {
     $('.depth2 button').removeClass('on');
-    
+
     // 버튼선택자 for 비교
-    $('.depth2 button').each(function(i){
+    $('.depth2 button').each(function (i) {
       console.log(i);// 배열
       let button = $(this);
       console.log(button);
       let bool = $(this).hasClass('headphone');
-      if(bool) {
+      if (bool) {
         $(this).addClass('on');
       }
     })
   });
 
   // earphone
-  $('.btn-earphone').click(function(){
+  $('.btn-earphone').click(function () {
     $('.depth2 button').removeClass('on');
-    
+
     // 버튼선택자 for 비교
-    $('.depth2 button').each(function(i){
+    $('.depth2 button').each(function (i) {
       console.log(i);// 배열
       let button = $(this);
       console.log(button);
       let bool = $(this).hasClass('earphone');
-      if(bool) {
+      if (bool) {
         $(this).addClass('on');
       }
     })
   });
 
   // Tuentable/Speaker
-  $('.btn-tt-sp').click(function(){
+  $('.btn-tt-sp').click(function () {
     $('.depth2 button').removeClass('on');
-    
+
     // 버튼선택자 for 비교
-    $('.depth2 button').each(function(i){
+    $('.depth2 button').each(function (i) {
       console.log(i);// 배열
       let button = $(this);
       console.log(button);
       let bool = $(this).hasClass('tt-sp');
-      if(bool) {
+      if (bool) {
         $(this).addClass('on');
       }
     })
   });
 
   // mic
-  $('.btn-mc').click(function(){
+  $('.btn-mc').click(function () {
     $('.depth2 button').removeClass('on');
-    
+
     // 버튼선택자 for 비교
-    $('.depth2 button').each(function(i){
+    $('.depth2 button').each(function (i) {
       console.log(i);// 배열
       let button = $(this);
       console.log(button);
       let bool = $(this).hasClass('mc');
-      if(bool) {
+      if (bool) {
         $(this).addClass('on');
       }
     })
@@ -210,7 +210,7 @@ function showProducts_gvs(obj) {
 
 
   let tabNo = 0;
-  if(params == 'all') {
+  if (params == 'all') {
     tabNo = 0;
   } else if (params == '무선이어폰') {
     tabNo = 2;
@@ -268,42 +268,42 @@ function showProducts_gvs(obj) {
     if (params == product.category) {
       //                     data-id=~ = 사용자 정의 id
       let html = `
-        <div class="product" data-id=${i}>
-          <a href="./products-detail.html?id=${i}">
+      <div class="productL" data-id=${i}>
+        <a href="./products-detail.html?id=${i}">
 
-            <img src="${imgUrl}" alt="${name}">
+        <img src="${imgUrl}" alt="${name}">
 
-            <div class="info">
-              <p class="prd-title">${name}</p>
-              <p class="price">&#8361 ${price}</p>
-              <p class="explain">${text}</p>
-            </div>
-
-          </a>
+        <div class="infoL">
+          <p class="prd-title1">${name}</p>
+          <p class="price1">&#8361 ${price}</p>
+          <p class="explain">${text}</p>
         </div>
+
+        </a>
+      </div>
     `
-      $('#products-lvs .row').append(html);
+      $('#products-lvs .rowL').append(html);
     }
 
     // 상품 전체보기
     if (params == null) {
 
       let html = `
-        <div class="product" data-id=${i}>
-          <a href="./products-detail.html?id=${i}">
+      <div class="productL" data-id=${i}>
+        <a href="./products-detail.html?id=${i}">
 
-            <img src="${imgUrl}" alt="${name}">
+        <img src="${imgUrl}" alt="${name}">
 
-            <div class="info">
-              <p class="prd-title">${name}</p>
-              <p class="price">&#8361 ${price}</p>
-              <p class="explain">${text}</p>
-            </div>
-
-          </a>
+        <div class="infoL">
+          <p class="prd-title1">${name}</p>
+          <p class="price1">&#8361 ${price}</p>
+          <p class="explain">${text}</p>
         </div>
+
+        </a>
+      </div>
     `
-      $('#products-lvs .row').append(html);
+      $('#products-lvs .rowL').append(html);
       /*console.log(`i = `, i);*/
     };
 
