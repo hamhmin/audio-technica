@@ -50,9 +50,11 @@
 
 .check-box {
   width: 100%;
-  
 }
-
+.check-box form{
+  display: inline-block;
+  margin-top: 10px;
+}
 .check-box > form {
 margin-left: 20px;   
 width: 35%;
