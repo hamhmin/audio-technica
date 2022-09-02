@@ -1,0 +1,239 @@
+
+html{
+    margin: 0 auto;
+}
+#wrap{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    /* relative 하게되면 main 영역이 좌측으로 붙게되서
+    left 50% tlX-50% */
+    top: 0;
+    max-width: 500px;
+    min-width: 320px;
+    height: 100vh;
+}
+#shop main, #about main{
+    height: 100vh;
+    overflow-y: scroll;
+}
+#shop .gnb, #about .gnb{
+    position:absolute;
+    height: 100vh;
+}
+/* .page에 transform이 들어가 fixed가 안먹혀
+    html에서 부모관계를 깨주고 왼쪽으로 쏠린 헤더를 다시 transform */
+#shop #main-header{
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    z-index: 100;
+}
+#shop .menu-bar{
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
+    width: 100vw;
+    height: 40px;
+    line-height: 40px;
+    overflow-x: scroll;
+
+}
+#shop .menu-bar ul{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: scroll;
+    gap: 20px;
+}
+#shop .menu-bar ul li{
+    padding: 0 10px;
+    font-weight: 300;
+    height: 100%;
+    cursor: pointer;
+}
+#shop .menu-bar ul li.on{
+    border-bottom: 1px solid #ccc;
+    color: #999;
+    font-weight: 300;
+    
+}
+#shop main{
+
+}
+.sub-main-wrap{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: left;
+    gap: 20px;
+}
+#shop main .col{
+    width: calc(50% - 10px);
+}
+#shop main .col a{
+    width: 100%;
+    height: 100%;
+}
+#shop main .col img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    max-height: 210px;
+}
+#shop main .col h2{
+    font-size: 13px;
+    font-weight: 300;
+    color: #444;
+    margin-top: 5px;
+}
+#shop main .col h3{
+    font-size: 13px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+#shop main .col h4{
+    font-size: 13px;
+    font-weight: 300;
+    color: #666;
+}
+
+#about main{
+    padding: 90px 20px 40px 20px;
+}
+#about .img-blur{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+#about .img-blur img{
+    width: 150px;
+    filter: blur(2px) grayscale(80%);
+    transition: 1s;
+}
+#about .img-blur:hover img{
+    filter: blur(0) grayscale(0);
+}
+
+#about main article{
+    margin: 40px 0 0 0;
+    text-align: center;
+    line-height: 40px;
+}
+#about main article p{
+    font-weight: 400;
+}
+#about main article .small{
+    font-size: 12px;
+}
+#about main article .medium{
+    font-size: 13px;
+}
+#about main article .large{
+    font-size: 14px;
+}
+#detail #main-header{
+    background: #fff;
+}
+#detail main{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    width: 100vw;
+}
+#detail main article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: right;
+    gap: 20px;
+}
+#detail main article img{
+    height: 400px;
+    object-fit: cover;
+}
+.detail-page{
+    width: calc(100vw - 40px);
+    object-fit: cover;
+}
+#detail main article p{
+    font-size: 12px;
+    font-weight: 500;
+}
+#detail main article p span{
+    font-size: 13px;
+}
+#detail main article h6{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 12px;
+}
+#detail main .shop-box{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 50px;
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: 0 4px 15px #999;
+    gap: 20px;
+    
+    transition: 0.6s;
+}
+#detail main .shop-box .shop-toggle{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 45px;
+    border-top: 0px solid transparent;
+    border-bottom: 20px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    background: transparent;
+    box-shadow: 0;
+    height: 0;
+    text-align: center;
+}
+#detail .shop-toggle .bi{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+ color: #666;
+ width: 45px;
+ height: 20px;
+ font-size: 16px;
+}
+.shop-up{
+    display: none;
+}
+#detail main .shop-box .btn-box{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#detail main .shop-box .btn-box button{
+    width: 40vw;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    border: 0;
+}
+#detail main .shop-box .btn-box .cart-btn{
+background: #fff;
+border: 1px solid #ccc;
+}
+#detail main .shop-box .buy-btn{
+    background: #333;
+    color: #fff;
+}
